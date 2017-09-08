@@ -1,0 +1,55 @@
+{% extends "accounts/base.html" %}
+
+{% block javascript %}
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+{% load static %}
+
+{% endblock %}
+
+{% block stylesheets %}
+  {% load static %}
+
+{% endblock %}
+
+{% block content %}
+  <p id="nesto">Welcome to Google maps API
+  <a href="{% url 'accounts:logout' %}"><p id="link">LOGOUT<p></a>
+
+  {{ chart.as_html }}
+
+  <form action="/charts/savegraph/">
+    <input type="submit" value="SaveGraph">
+  </form>
+  <br>
+  <form action="http://localhost:8000/charts/upload/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+  <br>
+  <form action="/charts/exportjson/">
+    <input type="submit" value="ExportToJson">
+  </form>
+  <form action="/charts/exportcsv/">
+    <input type="submit" value="ExportToCsv">
+  </form>
+  <form action="/charts/exportxls/">
+    <input type="submit" value="ExportToXls">
+  </form>
+  <br>
+  <form action="">
+  <select name="charts">
+    <option value="BarChart">BarChart</option>
+    <option value="LineChart">LineChart</option>
+    <option value="ColumnChart">ColumnChart</option>
+    <option value="PieChart">PieChart</option>
+  </select>
+  <input type="submit">
+  </form>
+  <br>
+  <a href="../../charts/uploadform">Manul data upload</a>
+  <a href="../../charts/savegraphs">Saved graphs</a>
+{% endblock %}

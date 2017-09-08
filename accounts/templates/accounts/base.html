@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/style.css' %}"/>
+
+  {% block javascript %}{% endblock javascript%}
+
+  {% block stylesheets %}{% endblock stylesheets %}
+
+  <meta charset="UTF-8">
+
+  {% block title %}<title>Google maps API</title>{% endblock title %}
+</head>
+
+<body>
+  <header>Char{{ user.username }}</header>
+
+  {% block content %}{% endblock content %}
+
+  <footer>Copyright &copy; Boris Besker</footer>
+</body>
+
+</html>

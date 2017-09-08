@@ -1,0 +1,7 @@
+{% block content %}
+   {% for graph in graphs %}
+      <br><a href="/charts/drawsaved/{{ graph.id }}">{{ graph.id }}</a></br>
+   {% endfor %}
+{% endblock %}
+
+<a href="../../charts/draw/">Return to main page</a>
