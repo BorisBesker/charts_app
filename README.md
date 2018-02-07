@@ -10,10 +10,10 @@ User
 Use cases:
 1. Admin has CRUD privileges on users and other models
 2. User can either import a document with the data of a graph or enter it manually
-User can pick and choose for at least 4 different graph types
-User can export the data (mostly because of the manually entered data) to CSV or JSON
-User can save his graphs and revisit them later
-User can export data in XLS(X)
+3. User can pick and choose for at least 4 different graph types
+4. User can export the data (mostly because of the manually entered data) to CSV or JSON
+5. User can save his graphs and revisit them later
+6. User can export data in XLS(X)
 
 
 Implications
