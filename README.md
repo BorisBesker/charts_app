@@ -8,8 +8,8 @@ Admin
 User
 
 Use cases:
-Admin has CRUD privileges on users and other models
-User can either import a document with the data of a graph or enter it manually
+1. Admin has CRUD privileges on users and other models
+2. User can either import a document with the data of a graph or enter it manually
 User can pick and choose for at least 4 different graph types
 User can export the data (mostly because of the manually entered data) to CSV or JSON
 User can save his graphs and revisit them later
